@@ -1,52 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
     <link rel="stylesheet" href="admin.css">
 </head>
+
 <body>
     <div class="container">
         <h2>Admin Dashboard</h2>
-        
+
         <!-- Add New User Form -->
         <h3>Add New User</h3>
         <form id="addUserForm">
             <label for="firstName">First Name:</label>
             <input type="text" id="firstName" required><br>
-    
+
             <label for="lastName">Last Name:</label>
             <input type="text" id="lastName" required><br>
-    
+
             <label for="email">Email:</label>
             <input type="email" id="email" required><br>
-            
+
             <label for="password">Password:</label>
             <input type="password" id="password" required><br>
-    
+
             <button type="submit">Add User</button>
         </form>
-        
+
         <!-- User Edit Form -->
         <h3>Edit User</h3>
         <form id="editUserForm" style="display:none;">
             <label for="editFirstName">First Name:</label>
             <input type="text" id="editFirstName" required><br>
-    
+
             <label for="editLastName">Last Name:</label>
             <input type="text" id="editLastName" required><br>
-    
+
             <label for="editEmail">Email:</label>
             <input type="email" id="editEmail" required><br>
-    
+
             <label for="editPassword">Password:</label>
             <input type="password" id="editPassword" required><br>
-            
+
             <button type="submit">Save Changes</button>
             <button type="button" onclick="cancelEdit()">Cancel</button>
         </form>
-    
+
         <h3>Registered Users</h3>
         <table id="usersTable">
             <thead>
@@ -60,7 +62,7 @@
             </thead>
             <tbody></tbody>
         </table>
-    
+
         <h3>All Orders</h3>
         <table id="ordersTable">
             <thead>
@@ -75,12 +77,18 @@
         </table>
 
 
-        
-        
+
+
         <button id="logoutBtn" onclick="logout()">Logout</button>
     </div>
-    
 
     <script src="./app.js"></script>
+    <script>
+        function logout() {
+            alert("Logout successful!");
+            window.location.href = "./login.html";
+        }
+    </script>
 </body>
+
 </html>
